@@ -3,7 +3,7 @@ const axios = require("axios");
 const bodyParser = require("body-parser");
 const app = express();
 // const port = 3000; // Set your desired port
-const port = 'http://localhost:3000/';
+const port = 'https://chatapp-ts.vercel.app/';
 const cors = require("cors"); // Import the cors middleware
 
 const admin = require("firebase-admin");
@@ -52,6 +52,6 @@ app.post("/send-notification", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log(`Server is running on port ${3000}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
