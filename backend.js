@@ -2,8 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const app = express();
-// const port = 3000; // Set your desired port
-const port = 'https://chatapp-ts.vercel.app/';
+const port = 3000; // Set your desired port
+// const port = 'https://chatapp-ts.vercel.app/';
 const cors = require("cors"); // Import the cors middleware
 
 const admin = require("firebase-admin");
@@ -27,7 +27,7 @@ app.post("/send-notification", async (req, res) => {
   try {
     // Get registration tokens and notification data from the request
     const { registrationTokens, data, notification, tokenToExclude } = req.body;
-
+console.log(registrationTokens,rgs);
     const filteredtoken = registrationTokens.filter((token) => token !== tokenToExclude);
     console.log(filteredtoken, "filteredtoken");
 
